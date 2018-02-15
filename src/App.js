@@ -1,19 +1,29 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import List from './List';
+import Input from './Input';
+
+const Wrapper = styled.div`
+    width: 960px;
+    margin: 2rem auto;
+    background: #FFF;
+    padding: 2rem;
+`;
+
+const Title = styled.h1`
+    font-size: 20px;
+    color: #444;
+    margin-bottom: 2rem;
+`;
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Wrapper>
+          <Title>To Do</Title>
+          <Input />
+          <List />
+      </Wrapper>
     );
   }
 }
